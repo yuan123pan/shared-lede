@@ -9,6 +9,13 @@
 #
 name: 固件编译 openwrt 22.03
 
+env:
+  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_BRANCH: master
+  CONFIG_FILE: config-x86-Lean
+  DIY_SH: diy-x86-Lean.sh
+  SSH_ACTIONS:  ture
+
 on:
   workflow_dispatch:
     inputs:
