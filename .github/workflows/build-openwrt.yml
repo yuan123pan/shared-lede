@@ -128,11 +128,9 @@ jobs:
           :
 
 
-       - name: SSH连接
-
-         uses: sypopo/debugger-action@master
-
-         if: env.SSH_ACTIONS == 'true'
+      - name: SSH连接
+        uses: sypopo/debugger-action@master
+        if: env.SSH_ACTIONS == 'true'
 
       - name: 生成.config文件
         env:
