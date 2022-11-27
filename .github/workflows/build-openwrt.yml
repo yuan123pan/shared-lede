@@ -127,6 +127,10 @@ jobs:
           mv $DOT_CONFIG .config
           make defconfig
 
+    - name: SSH连接
+      uses: sypopo/debugger-action@master
+      if: env.SSH_ACTIONS == 'true'
+
       - name: 下载编译资源
         run: |
           make download -j8 || make download -j1 V=s
