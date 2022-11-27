@@ -120,6 +120,13 @@ jobs:
               package/base-files/files/bin/config_generate
           :
 
+
+       - name: SSH连接
+
+         uses: sypopo/debugger-action@master
+
+         if: env.SSH_ACTIONS == 'true'
+
       - name: 生成.config文件
         env:
           DOT_CONFIG: ${{ env.DEPLOYDIR }}/${{ env.TEMP_PREFIX }}.config
@@ -127,9 +134,6 @@ jobs:
           mv $DOT_CONFIG .config
           make defconfig
 
-    - name: SSH连接
-      uses: sypopo/debugger-action@master
-      if: env.SSH_ACTIONS == 'true'
 
       - name: 下载编译资源
         run: |
