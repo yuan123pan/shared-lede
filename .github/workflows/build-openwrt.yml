@@ -14,7 +14,7 @@ env:
   REPO_BRANCH: master
   CONFIG_FILE: config-x86-Lean
   DIY_SH: diy-x86-Lean.sh
-  SSH_ACTIONS:  ture
+  SSH_ACTIONS:  true
 
 on:
   workflow_dispatch:
